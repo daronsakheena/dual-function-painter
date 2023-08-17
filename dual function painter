@@ -1,0 +1,18 @@
+hide();
+penColor("white");
+createCanvas("canvas", 320, 450);
+setActiveCanvas("canvas");
+onEvent("canvas", "mousemove", function(mouse) {
+  moveTo(mouse.x, mouse.y);
+});
+onEvent("black", "click", function(mouse) {
+  penColor("black");
+});
+
+onEvent("Red", "click", function() {
+  penColor("red");
+});
+onEvent("eraser", "click", function() {
+  penColor("white");
+  penWidth(5);
+});
